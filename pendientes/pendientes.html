@@ -1,0 +1,28 @@
+﻿<section id="pendientes" class="view-section">
+  <div class="mb-8 flex items-center justify-between">
+    <div>
+      <h2 class="text-4xl font-extrabold">Tareas Pendientes entre Turnos</h2>
+      <p class="text-muted">Gestión de coordinación de servicios y pendientes críticos</p>
+    </div>
+    <button id="newTaskBtn" class="rounded-xl bg-brand px-5 py-3 font-bold text-white shadow-soft">Nueva tarea</button>
+  </div>
+
+  <!-- Filtros -->
+  <div class="mb-8 grid gap-6 xl:grid-cols-[360px_1fr]">
+    <div class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <p class="text-xs font-extrabold uppercase tracking-wider text-brandDark">Filtrar por fecha</p>
+      <div class="mt-4 rounded-xl bg-soft p-4 text-lg">11/24/2023</div>
+    </div>
+    <div class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <p class="text-xs font-extrabold uppercase tracking-wider text-brandDark">Estado de tareas</p>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        <button data-filter="todas" class="filter-btn rounded-xl border border-brand px-5 py-4 font-bold text-brandDark bg-white">Todas</button>
+        <button data-filter="pendientes" class="filter-btn rounded-xl bg-[#f8f7fb] px-5 py-4 text-muted">Pendientes</button>
+        <button data-filter="completadas" class="filter-btn rounded-xl bg-[#f8f7fb] px-5 py-4 text-muted">Completadas</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lista de tareas -->
+  <div id="tasksList" class="grid gap-3"></div>
+</section>

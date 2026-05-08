@@ -1,0 +1,86 @@
+﻿<section id="veterinarias" class="view-section">
+  <div class="mb-5">
+    <h2 class="text-2xl font-extrabold">Veterinarias</h2>
+    <p class="text-sm text-muted">Módulo visual para alianzas, ubicación y volumen de servicios enviados.</p>
+  </div>
+
+  <!-- Perfil de una veterinaria destacada -->
+  <article class="mb-6 rounded-3xl border border-[#dedbea] bg-white p-6 shadow-card">
+    <div class="grid gap-6 xl:grid-cols-[120px_minmax(0,1fr)_auto] xl:items-center">
+      <div class="grid h-28 w-28 place-items-center rounded-3xl bg-violet-100 text-brand">
+        <span class="material-symbols-outlined text-[54px]">local_hospital</span>
+      </div>
+      <div>
+        <div class="flex flex-wrap items-center gap-3">
+          <h3 class="text-3xl font-extrabold">Clínica Veterinaria San Francisco</h3>
+          <span class="rounded-full bg-violet-100 px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-brandDark">Aliado premium</span>
+        </div>
+        <p class="mt-2 text-muted">Socio desde enero 2023</p>
+        <div class="mt-5 grid gap-3 text-sm text-muted md:grid-cols-3">
+          <span class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-brand">person</span>
+            Dra. Elena Gómez
+          </span>
+          <span class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-brand">location_on</span>
+            Av. Amazonas N34-12, Quito
+          </span>
+          <span class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-brand">call</span>
+            +593 2 255 4321
+          </span>
+        </div>
+      </div>
+      <button class="h-12 rounded-xl bg-brand px-5 text-sm font-extrabold text-white">Editar perfil</button>
+    </div>
+  </article>
+
+  <!-- Resumen de estadísticas -->
+  <div class="mb-6 grid gap-4 md:grid-cols-4">
+    <article class="rounded-2xl border border-violet-100 bg-white p-5 shadow-soft">
+      <p class="text-sm font-bold text-muted">Aliadas activas</p>
+      <p class="mt-3 text-3xl font-extrabold">24</p>
+    </article>
+    <article class="rounded-2xl border border-violet-100 bg-white p-5 shadow-soft">
+      <p class="text-sm font-bold text-muted">Con convenio</p>
+      <p class="mt-3 text-3xl font-extrabold">12</p>
+    </article>
+    <article class="rounded-2xl border border-violet-100 bg-white p-5 shadow-soft">
+      <p class="text-sm font-bold text-muted">Servicios referidos</p>
+      <p class="mt-3 text-3xl font-extrabold">86</p>
+    </article>
+    <article class="rounded-2xl border border-violet-100 bg-white p-5 shadow-soft">
+      <p class="text-sm font-bold text-muted">Ingreso aliado</p>
+      <p class="mt-3 text-3xl font-extrabold">$12.4k</p>
+    </article>
+  </div>
+
+  <!-- Últimos servicios referidos y notas -->
+  <div class="grid gap-6 xl:grid-cols-[1fr_360px]">
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <div class="mb-5 flex items-center justify-between">
+        <h3 class="text-xl font-extrabold">Últimos servicios referidos</h3>
+        <button class="text-sm font-extrabold text-brandDark">Ver todo</button>
+      </div>
+      <div id="vetCards" class="grid gap-3"></div>
+    </article>
+
+    <aside class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <div class="flex items-center justify-between">
+        <h3 class="text-xl font-extrabold">Notas internas</h3>
+        <span class="material-symbols-outlined text-brand">chat</span>
+      </div>
+      <div class="mt-5 grid gap-4">
+        <div class="rounded-2xl bg-soft p-4">
+          <p class="text-sm font-extrabold text-brandDark">10 Oct, 2023 · Admin</p>
+          <p class="mt-2 text-sm leading-6 text-ink">Solicitaron actualización de folletos informativos para su sala de espera.</p>
+        </div>
+        <div class="rounded-2xl bg-[#f8f8fb] p-4">
+          <p class="text-sm font-extrabold text-muted">25 Sep, 2023 · Dra. Elena</p>
+          <p class="mt-2 text-sm leading-6 text-ink">Referencia excelente: familia muy satisfecha con la rapidez del servicio.</p>
+        </div>
+      </div>
+      <button class="mt-5 w-full rounded-xl border border-brand px-4 py-3 text-sm font-extrabold text-brandDark">Guardar nota</button>
+    </aside>
+  </div>
+</section>

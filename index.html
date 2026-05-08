@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huellas Memorables | Plataforma de Gestión</title>
+  
+
+  <!-- Tailwind CDN y configuracion personalizada -->
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+
+  <!-- Fuentes e íconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@200..700,0..1&display=swap" rel="stylesheet" />
+  
+  <!-- Estilos globales compartidos -->
+  <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+</head>
+<body class="bg-lavender font-sans text-ink">
+
+  <div class="min-h-screen lg:grid lg:grid-cols-[280px_minmax(0,1fr)]">
+    <!-- Sidebar fijo -->
+    <aside class="sticky top-0 z-20 border-r border-[#dedbea] bg-[#f1eff8] p-5 lg:h-screen">
+      <div class="mb-7 flex items-center gap-3">
+        <div class="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brandDark to-brand text-white shadow-soft">
+          <span class="material-symbols-outlined text-[28px]">pets</span>
+        </div>
+        <div>
+          <p class="font-extrabold leading-5">Huellas Memorables</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-muted">Suite de cuidado memorial</p>
+        </div>
+      </div>
+
+      <nav id="sidebarNav" class="grid gap-1">
+        <button data-view="panel" class="nav-btn active flex min-h-11 items-center gap-3 rounded-xl px-3 text-left text-sm font-bold text-ink bg-white">
+          <span class="material-symbols-outlined grid h-7 w-7 place-items-center rounded-lg bg-white text-[20px] text-brand">dashboard</span>Panel
+        </button>
+        <button data-view="servicios" class="nav-btn flex min-h-11 items-center gap-3 rounded-xl px-3 text-left text-sm font-bold text-muted">
+          <span class="material-symbols-outlined grid h-7 w-7 place-items-center rounded-lg bg-white text-[20px] text-brand">business_center</span>Servicios
+        </button>
+        <button data-view="clientes" data-crm-tab="clients" class="nav-btn flex min-h-11 items-center gap-3 rounded-xl px-3 text-left text-sm font-bold text-muted">
+          <span class="material-symbols-outlined grid h-7 w-7 place-items-center rounded-lg bg-white text-[20px] text-brand">groups</span>Clientes
+        </button>
+        <button data-view="clientes" data-crm-tab="vets" class="nav-btn flex min-h-11 items-center gap-3 rounded-xl px-3 text-left text-sm font-bold text-muted">
+          <span class="material-symbols-outlined grid h-7 w-7 place-items-center rounded-lg bg-white text-[20px] text-brand">local_hospital</span>Veterinarias
+        </button>
+        <button data-view="seguimiento" class="nav-btn flex min-h-11 items-center gap-3 rounded-xl px-3 text-left text-sm font-bold text-muted">
+          <span class="material-symbols-outlined grid h-7 w-7 place-items-center rounded-lg bg-white text-[20px] text-brand">timeline</span>Seguimiento
+        </button>
+        <button data-view="pagos" class="nav-btn flex min-h-11 items-center gap-3 rounded-xl px-3 text-left text-sm font-bold text-muted">
+          <span class="material-symbols-outlined grid h-7 w-7 place-items-center rounded-lg bg-white text-[20px] text-brand">payments</span>Pagos
+        </button>
+        <button data-view="pendientes" class="nav-btn flex min-h-11 items-center gap-3 rounded-xl px-3 text-left text-sm font-bold text-muted">
+          <span class="material-symbols-outlined grid h-7 w-7 place-items-center rounded-lg bg-white text-[20px] text-brand">task_alt</span>Pendientes
+        </button>
+        <button data-view="configuracion" class="nav-btn flex min-h-11 items-center gap-3 rounded-xl px-3 text-left text-sm font-bold text-muted">
+          <span class="material-symbols-outlined grid h-7 w-7 place-items-center rounded-lg bg-white text-[20px] text-brand">settings</span>Configuración
+        </button>
+      </nav>
+
+      <div class="mt-8 rounded-2xl border border-white/70 bg-white/75 p-4 shadow-card">
+        <p class="text-xs font-extrabold uppercase tracking-wider text-brandDark">Estandar de servicio</p>
+        <p class="mt-1 text-sm text-muted">Operación trazable, comunicación sensible y control administrativo en una sola plataforma.</p>
+        <div class="mt-4 rounded-xl bg-[#f8f6ff] p-3">
+          <p class="text-xs font-bold uppercase tracking-wider text-muted">Turno activo</p>
+          <p class="mt-1 text-sm font-extrabold">Atención premium</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Zona principal de contenido -->
+    <main class="min-w-0">
+      <header class="sticky top-0 z-10 border-b border-[#dedbea] bg-lavender/90 px-5 py-4 backdrop-blur lg:px-8">
+        <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+          <div>
+            <p class="text-xs font-extrabold uppercase tracking-wider text-brandDark">Centro de operaciones memoriales</p>
+            <h1 id="pageTitle" class="text-2xl font-extrabold tracking-normal text-ink">Panel</h1>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <label class="relative block">
+              <span class="absolute left-3 top-2.5 text-sm font-bold text-muted">Buscar</span>
+              <input id="globalSearch" class="h-11 w-full rounded-xl border border-violet-100 bg-white pl-16 pr-4 text-sm shadow-sm outline-none focus:border-brand focus:ring-4 focus:ring-violet-100 sm:w-80" placeholder="servicio, familia, mascota" />
+            </label>
+            <button id="notificationBtn" class="relative h-11 rounded-xl border border-[#dedbea] bg-white px-4 text-sm font-bold shadow-sm">
+              Alertas de turno
+              <span id="notificationDot" class="absolute -right-1 -top-1 grid h-5 w-5 place-items-center rounded-full bg-brand text-[10px] text-white">3</span>
+            </button>
+            <div class="flex h-11 items-center gap-3 rounded-xl border border-[#dedbea] bg-white px-3 shadow-sm">
+              <div class="grid h-8 w-8 place-items-center rounded-full bg-brand text-xs font-extrabold text-white">DR</div>
+              <div class="hidden sm:block">
+                <p class="text-sm font-extrabold leading-4">Daniela Ruiz</p>
+                <p class="text-xs text-muted">Coordinadora</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Aquí se inyectarán las vistas -->
+      <div id="app-main" class="p-5 lg:p-8"></div>
+    </main>
+  </div>
+
+  <!-- Los modales se insertarán dinámicamente desde modales.html -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

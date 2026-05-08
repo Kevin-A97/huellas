@@ -1,0 +1,107 @@
+﻿/* ===== RESET Y BASE ===== */
+body {
+  background-color: #f8f7fd;
+  color: #1e1b2e;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Mejora del foco */
+*:focus-visible {
+  outline: 3px solid #6c5ce7;
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+/* ===== TIPOGRAFÍA ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: #5a5672;
+}
+
+/* Ajuste de pesos para Manrope (se cargan desde Google Fonts) */
+.font-extrabold {
+  font-weight: 800;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+/* ===== TARJETAS Y SUPERFICIES ===== */
+.bg-white {
+  background-color: #ffffff;
+  border: 1px solid #f0eff8;
+}
+
+.shadow-card,
+.shadow-soft {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.shadow-card:hover,
+.shadow-soft:hover {
+  box-shadow: 0 12px 40px rgba(108, 92, 231, 0.12); /* sombra hover */
+  transform: translateY(-2px);
+}
+
+/* Evitar hover en elementos que no deben moverse (tablas, etc.) */
+table .shadow-card:hover,
+table .shadow-soft:hover {
+  transform: none;
+}
+
+/* ===== BOTONES ===== */
+button {
+  transition: all 0.2s ease;
+}
+
+/* Estilo para botones primarios */
+.btn-primary {
+  background-color: #6c5ce7;
+  color: white;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+.btn-primary:hover {
+  background-color: #4834d4;
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+
+/* ===== NAVEGACIÓN LATERAL ===== */
+.nav-btn {
+  transition: all 0.2s;
+  border-radius: 0.75rem;
+}
+
+.nav-btn.active {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.1);
+  color: #1e1b2e;
+}
+
+/* ===== HEADER ===== */
+header {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background-color: rgba(248, 247, 253, 0.85);
+}
+
+/* ===== MODALES ===== */
+[id$="Modal"] {
+  background-color: rgba(30, 27, 46, 0.3);
+}
+
+/* ===== TOAST ===== */
+#toast {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}

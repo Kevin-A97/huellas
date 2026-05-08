@@ -1,0 +1,155 @@
+﻿<section id="panel" class="view-section">
+  <div class="mb-6 overflow-hidden rounded-3xl border border-[#dedbea] bg-white shadow-card">
+    <div class="grid gap-6 p-6 xl:grid-cols-[1.15fr_.85fr] xl:p-8">
+      <div>
+        <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-brandDark">Operación con trazabilidad y cuidado</p>
+        <h2 class="mt-3 max-w-3xl text-3xl font-extrabold leading-tight text-ink md:text-4xl">Gestiona cada despedida con precisión, calma y respeto.</h2>
+        <p class="mt-4 max-w-2xl text-base leading-7 text-muted">Huellas Memorables centraliza servicios, familias, veterinarias, pagos y seguimiento para que el equipo mantenga una experiencia impecable en momentos sensibles.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button data-view-target="servicios" class="go-view rounded-xl bg-brand px-5 py-3 text-sm font-extrabold text-white shadow-soft">Gestionar servicios</button>
+          <button data-view-target="portalCliente" class="go-view rounded-xl border border-[#dedbea] bg-white px-5 py-3 text-sm font-extrabold text-ink">Vista familia</button>
+        </div>
+      </div>
+      <div class="rounded-3xl bg-gradient-to-br from-[#f5f2ff] to-[#edf2f7] p-5">
+        <div class="rounded-2xl bg-white/85 p-5 shadow-card">
+          <p class="text-xs font-extrabold uppercase tracking-wider text-muted">Servicio destacado</p>
+          <div class="mt-4 flex items-center justify-between gap-4">
+            <div>
+              <p class="text-xl font-extrabold">Luna | HM-1048</p>
+              <p class="mt-1 text-sm text-muted">Familia Andrade</p>
+            </div>
+            <span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-extrabold text-violet-700">En cremación</span>
+          </div>
+          <div class="mt-5 grid grid-cols-4 gap-2">
+            <span class="h-2 rounded-full bg-brand"></span>
+            <span class="h-2 rounded-full bg-brand"></span>
+            <span class="h-2 rounded-full bg-brand"></span>
+            <span class="h-2 rounded-full bg-[#d7d4e7]"></span>
+          </div>
+          <p class="mt-4 text-sm text-muted">Entrega estimada hoy a las 5:30 pm con urna Cedro clara y certificado impreso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid gap-4 md:grid-cols-3">
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-5 shadow-card">
+      <p class="text-sm font-bold text-muted">Servicios activos</p>
+      <p class="mt-4 text-4xl font-extrabold">18</p>
+      <p class="mt-2 text-sm text-muted">5 en cremación, 4 en ruta</p>
+    </article>
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-5 shadow-card">
+      <p class="text-sm font-bold text-muted">Servicios completados</p>
+      <p class="mt-4 text-4xl font-extrabold">42</p>
+      <p class="mt-2 text-sm text-muted">Con cadena de custodia cerrada</p>
+    </article>
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-5 shadow-card">
+      <p class="text-sm font-bold text-muted">Pendientes</p>
+      <p class="mt-4 text-4xl font-extrabold">7</p>
+      <p class="mt-2 text-sm text-muted">2 requieren atencion inmediata</p>
+    </article>
+  </div>
+
+  <div class="mt-6 grid gap-6 xl:grid-cols-[1.35fr_.65fr]">
+    <article class="rounded-2xl border border-violet-100 bg-white p-5 shadow-soft">
+      <div class="mb-4 flex items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-extrabold">Servicios recientes</h2>
+          <p class="text-sm text-muted">Haz clic en un servicio para ver el detalle.</p>
+        </div>
+        <button data-view-target="servicios" class="go-view rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white">Ver todos</button>
+      </div>
+      <div id="recentServices" class="grid gap-3"></div>
+    </article>
+
+    <article class="rounded-2xl border border-violet-100 bg-white p-5 shadow-soft">
+      <h2 class="text-xl font-extrabold">Operación de hoy</h2>
+      <div class="mt-5 grid gap-4">
+        <div class="rounded-2xl bg-soft p-4">
+          <p class="text-sm font-bold text-muted">Tiempo promedio</p>
+          <p class="mt-1 text-2xl font-extrabold">3h 40m</p>
+        </div>
+        <div class="rounded-2xl bg-soft p-4">
+          <p class="text-sm font-bold text-muted">Entregas programadas</p>
+          <p class="mt-1 text-2xl font-extrabold">6</p>
+        </div>
+        <div class="rounded-2xl bg-soft p-4">
+          <p class="text-sm font-bold text-muted">Satisfacción cliente</p>
+          <p class="mt-1 text-2xl font-extrabold">98%</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="mt-6 grid gap-6 xl:grid-cols-[.85fr_1.15fr_.7fr]">
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-extrabold">Estado del servicio</h2>
+          <p class="text-sm text-muted">Distribución de casos activos</p>
+        </div>
+        <span class="material-symbols-outlined text-muted">more_vert</span>
+      </div>
+      <div class="mx-auto mt-8 grid h-52 w-52 place-items-center rounded-full bg-[conic-gradient(#19b885_0_58%,#3b82f6_58%_82%,#f59e0b_82%_100%)] p-5">
+        <div class="grid h-full w-full place-items-center rounded-full bg-white">
+          <div class="text-center">
+            <p class="text-3xl font-extrabold">18</p>
+            <p class="text-xs font-bold uppercase tracking-wider text-muted">Activos</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-7 grid gap-3 text-sm">
+        <div class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="h-3 w-3 rounded-full bg-[#19b885]"></i>Completado</span><strong>7</strong></div>
+        <div class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="h-3 w-3 rounded-full bg-blue-500"></i>En proceso</span><strong>5</strong></div>
+        <div class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="h-3 w-3 rounded-full bg-amber-500"></i>Pendiente</span><strong>2</strong></div>
+      </div>
+    </article>
+
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <div class="mb-5 flex items-center justify-between">
+        <div>
+          <h2 class="text-xl font-extrabold">Próximos servicios</h2>
+          <p class="text-sm text-muted">Agenda operativa del día</p>
+        </div>
+        <button data-view-target="seguimiento" class="go-view rounded-xl bg-soft px-4 py-2 text-xs font-extrabold text-brandDark">Ver agenda</button>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-full md:min-w-[560px] text-left text-sm">
+          <thead class="text-xs uppercase tracking-wider text-muted">
+            <tr><th class="py-3">Mascota</th><th>Servicio</th><th>Hora</th><th>Estado</th></tr>
+          </thead>
+          <tbody class="divide-y divide-violet-100">
+            <tr><td class="py-4 font-extrabold">Milo</td><td>Cremación Individual</td><td>14:00</td><td><span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-extrabold text-emerald-700">Listo</span></td></tr>
+            <tr><td class="py-4 font-extrabold">Luna</td><td>Servicio memorial</td><td>17:30</td><td><span class="rounded-full bg-violet-100 px-3 py-1 text-xs font-extrabold text-violet-700">En proceso</span></td></tr>
+            <tr><td class="py-4 font-extrabold">Toby</td><td>Recolección</td><td>18:15</td><td><span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-extrabold text-blue-700">Ruta</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <aside class="grid gap-4">
+      <div class="rounded-2xl bg-gradient-to-br from-brand to-brandDark p-6 text-white shadow-card">
+        <p class="text-lg font-extrabold">¿Necesitas apoyo?</p>
+        <p class="mt-2 text-sm text-violet-100">Escala una excepción o contacta al supervisor de turno.</p>
+        <button class="mt-5 rounded-xl bg-white px-4 py-2 text-sm font-extrabold text-brandDark">Contactar supervisor</button>
+      </div>
+      <div class="rounded-2xl border border-[#dedbea] bg-white p-5 shadow-card">
+        <h3 class="font-extrabold uppercase tracking-wider">Salud operacional</h3>
+        <div class="mt-5 grid gap-4 text-sm">
+          <div><div class="flex justify-between"><span>Vehículos</span><strong>80%</strong></div><div class="mt-2 h-2 rounded-full bg-soft"><span class="block h-2 w-4/5 rounded-full bg-emerald-500"></span></div></div>
+          <div><div class="flex justify-between"><span>Capacidad</span><strong>45%</strong></div><div class="mt-2 h-2 rounded-full bg-soft"><span class="block h-2 w-[45%] rounded-full bg-brand"></span></div></div>
+          <div><div class="flex justify-between"><span>Personal</span><strong>92%</strong></div><div class="mt-2 h-2 rounded-full bg-soft"><span class="block h-2 w-[92%] rounded-full bg-blue-500"></span></div></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <article class="mt-6 rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+    <h2 class="text-xl font-extrabold">Actividad reciente</h2>
+    <div class="mt-6 grid gap-5">
+      <div class="flex gap-4"><span class="grid h-9 w-9 place-items-center rounded-full bg-emerald-100 text-emerald-700">✓</span><div><p class="font-bold">Entrega confirmada para Milo con Familia Rosales</p><p class="text-xs font-bold uppercase tracking-wider text-muted">Hace 15 minutos · Servicio #HM-1047</p></div></div>
+      <div class="flex gap-4"><span class="grid h-9 w-9 place-items-center rounded-full bg-blue-100 text-blue-700">→</span><div><p class="font-bold">Recolección asignada para Toby en Vida Animal Norte</p><p class="text-xs font-bold uppercase tracking-wider text-muted">Hace 45 minutos · Conductor Sofia P.</p></div></div>
+      <div class="flex gap-4"><span class="grid h-9 w-9 place-items-center rounded-full bg-violet-100 text-brandDark">•</span><div><p class="font-bold">Portal familiar actualizado para Luna</p><p class="text-xs font-bold uppercase tracking-wider text-muted">Hace 2 horas · Cadena de custodia</p></div></div>
+    </div>
+  </article>
+</section>

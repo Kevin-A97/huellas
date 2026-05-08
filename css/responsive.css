@@ -1,0 +1,38 @@
+/* ===== RESPONSIVE ===== */
+
+/* Móvil pequeño */
+@media (max-width: 640px) {
+  .p-8 {
+    padding: 1.25rem !important;
+  }
+  h1 { font-size: 1.5rem !important; }
+  h2 { font-size: 1.25rem !important; }
+  h3 { font-size: 1.1rem !important; }
+  .text-4xl {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Tablet y escritorio pequeño */
+@media (max-width: 1024px) {
+  /* Sidebar se oculta y se puede mostrar con un botón (por ahora queda oculto) */
+  .lg\:grid-cols-\[280px_minmax\(0\2c 1fr\)\] {
+    grid-template-columns: 1fr !important;
+  }
+  aside {
+    display: none;
+  }
+  
+  /* Ajustar grids de KPIs */
+  .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Rejilla adaptable para tablas anchas */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}

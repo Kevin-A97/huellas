@@ -1,0 +1,14 @@
+﻿/* Estilos específicos del módulo de clientes */
+
+/* Transiciones suaves para las pestañas */
+.crm-tab {
+  transition: all 0.2s ease;
+}
+
+/* Opcional: mejora visual para el botón de volver */
+[data-back-crm] {
+  transition: transform 0.15s;
+}
+[data-back-crm]:hover {
+  transform: translateX(-3px);
+}

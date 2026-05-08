@@ -1,0 +1,74 @@
+﻿<section id="pagos" class="view-section">
+  <div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <h2 class="text-4xl font-extrabold">Gestión de Pagos</h2>
+      <p class="mt-1 text-muted">Monitorea actividades financieras y concilia pagos de servicios.</p>
+    </div>
+    <div class="flex gap-3">
+      <button class="rounded-xl border border-[#a49ab8] bg-white px-5 py-3 font-bold">Exportar CSV</button>
+      <button class="rounded-xl bg-brand px-5 py-3 font-bold text-white shadow-soft">+ Nuevo Pago</button>
+    </div>
+  </div>
+
+  <!-- KPIs financieros -->
+  <div class="grid gap-4 md:grid-cols-4">
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <p class="text-sm font-extrabold uppercase tracking-wider text-muted">Ingresos totales (mes)</p>
+      <p class="mt-5 text-3xl font-extrabold">$12,450.00 <span class="rounded-full bg-emerald-100 px-2 py-1 text-sm text-emerald-700">↗ 12%</span></p>
+    </article>
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <p class="text-sm font-extrabold uppercase tracking-wider text-muted">Pendiente de aprobación</p>
+      <p class="mt-5 text-3xl font-extrabold">14 <span class="rounded-full bg-amber-100 px-2 py-1 text-sm text-amber-700">Acción requerida</span></p>
+    </article>
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <p class="text-sm font-extrabold uppercase tracking-wider text-muted">Tiempo prom. de pago</p>
+      <p class="mt-5 text-3xl font-extrabold">1.4 Días <span class="rounded-full bg-violet-100 px-2 py-1 text-sm text-brandDark">Óptimo</span></p>
+    </article>
+    <article class="rounded-2xl border border-[#dedbea] bg-white p-6 shadow-card">
+      <p class="text-sm font-extrabold uppercase tracking-wider text-muted">Conciliación del sistema</p>
+      <p class="mt-5 text-3xl font-extrabold">99.2% <span class="rounded-full bg-emerald-100 px-2 py-1 text-sm text-emerald-700">Sincronizado</span></p>
+    </article>
+  </div>
+
+  <!-- Tabla de transacciones y detalle de pago -->
+  <div class="mt-8 grid gap-6 xl:grid-cols-[1fr_390px]">
+    <article class="overflow-hidden rounded-3xl border border-[#dedbea] bg-white shadow-card">
+      <div class="flex items-center justify-between p-6">
+        <h3 class="text-2xl font-extrabold">Transacciones Recientes</h3>
+        <button class="rounded-xl border border-violet-100 px-4 py-3">≡</button>
+      </div>
+      <div id="paymentsList"></div>
+    </article>
+
+    <aside class="rounded-3xl border border-violet-200 bg-white p-7 shadow-card">
+      <div class="flex items-start justify-between">
+        <h3 class="text-2xl font-extrabold">Detalle del Pago</h3>
+        <span class="text-3xl text-muted cursor-pointer">×</span>
+      </div>
+      <div class="mt-8 flex gap-5">
+        <div class="grid h-16 w-16 place-items-center rounded-2xl bg-violet-50 text-brand">
+          <span class="material-symbols-outlined">account_balance</span>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold">$450.00</p>
+          <p class="font-bold uppercase tracking-wider text-amber-600">Esperando verificación</p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-violet-100 pt-6">
+        <p class="font-extrabold uppercase tracking-wider text-muted">Información de transferencia</p>
+        <div class="mt-5 grid grid-cols-2 gap-5 text-sm">
+          <div><p class="text-muted">Número de referencia</p><strong>TXN-88294401</strong></div>
+          <div><p class="text-muted">Banco</p><strong>Chase Federal</strong></div>
+          <div><p class="text-muted">Fecha de envío</p><strong>Oct 24, 14:22</strong></div>
+          <div><p class="text-muted">Cuenta origen</p><strong>**** 9021</strong></div>
+        </div>
+      </div>
+      <div class="mt-6 h-44 rounded-2xl bg-gradient-to-br from-slate-200 to-cyan-100 p-5 text-slate-700">
+        <p class="font-extrabold">Comprobante de pago</p>
+        <p class="mt-8 rotate-[-5deg] rounded bg-white/70 p-4 text-sm shadow">Proof of Payment · Bank Transfer</p>
+      </div>
+      <button class="mt-6 w-full rounded-xl bg-brand px-5 py-4 font-extrabold text-white">Marcar como Pagado</button>
+      <button class="mt-4 w-full rounded-xl border border-red-500 px-5 py-4 font-extrabold text-red-600">Rechazar Pago</button>
+    </aside>
+  </div>
+</section>
