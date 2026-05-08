@@ -8,7 +8,9 @@ window.tailwind.config = {
     "text-emerald-700",
     "border-red-100",
     "border-amber-100",
-    "border-blue-100"
+    "border-blue-100",
+    "translate-x-0",
+  "-translate-x-full",
   ],
   theme: {
     extend: {

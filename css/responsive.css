@@ -19,9 +19,6 @@
   .lg\:grid-cols-\[280px_minmax\(0\2c 1fr\)\] {
     grid-template-columns: 1fr !important;
   }
-  aside {
-    display: none;
-  }
   
   /* Ajustar grids de KPIs */
   .grid-cols-3, .grid-cols-4 {
@@ -34,5 +31,19 @@
   table {
     display: block;
     overflow-x: auto;
+  }
+}
+
+/* Sidebar móvil - transformaciones */
+#sidebar {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+#sidebar.sidebar-visible {
+  transform: translateX(0);
+}
+@media (min-width: 1024px) {
+  #sidebar {
+    transform: translateX(0) !important;
   }
 }

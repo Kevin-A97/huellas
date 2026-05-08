@@ -23,9 +23,9 @@
 </head>
 <body class="bg-lavender font-sans text-ink">
 
-  <div class="min-h-screen lg:grid lg:grid-cols-[280px_minmax(0,1fr)]">
+  <div class="min-h-screen">
     <!-- Sidebar fijo -->
-    <aside class="sticky top-0 z-20 border-r border-[#dedbea] bg-[#f1eff8] p-5 lg:h-screen">
+<aside id="sidebar" class="fixed top-0 left-0 z-[60] h-screen w-[85vw] max-w-[280px] overflow-y-auto border-r border-[#dedbea] bg-[#f1eff8] p-5 transition-transform duration-300 ease-in-out -translate-x-full lg:translate-x-0">
       <div class="mb-7 flex items-center gap-3">
         <div class="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brandDark to-brand text-white shadow-soft">
           <span class="material-symbols-outlined text-[28px]">pets</span>
@@ -73,14 +73,33 @@
       </div>
     </aside>
 
+    <div
+  id="sidebarOverlay"
+    class="fixed inset-0 z-50 hidden bg-black/40 lg:hidden"
+></div>
+
     <!-- Zona principal de contenido -->
-    <main class="min-w-0">
+    <main class="relative z-10 min-w-0 lg:ml-[280px] overflow-hidden">
       <header class="sticky top-0 z-10 border-b border-[#dedbea] bg-lavender/90 px-5 py-4 backdrop-blur lg:px-8">
         <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
-          <div>
-            <p class="text-xs font-extrabold uppercase tracking-wider text-brandDark">Centro de operaciones memoriales</p>
-            <h1 id="pageTitle" class="text-2xl font-extrabold tracking-normal text-ink">Panel</h1>
-          </div>
+      <div class="flex items-center gap-3">
+        <button
+          id="menuBtn"
+          class="grid h-11 w-11 place-items-center rounded-xl border border-[#dedbea] bg-white shadow-sm lg:hidden"
+        >
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <div>
+          <p class="text-xs font-extrabold uppercase tracking-wider text-brandDark">
+            Centro de operaciones memoriales
+          </p>
+
+          <h1 id="pageTitle" class="text-2xl font-extrabold tracking-normal text-ink">
+            Panel
+          </h1>
+        </div>
+      </div>
           <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
             <label class="relative block">
               <span class="absolute left-3 top-2.5 text-sm font-bold text-muted">Buscar</span>
